@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migration:generate": "typeorm-ts-node-commonjs migration:generate src/migrations/InitialSchema -d src/data_conect.ts"
   },
   "keywords": [],
   "author": "",

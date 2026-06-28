@@ -1,4 +1,5 @@
-import { Entity,PrimaryGeneratedColumn,Column } from "typeorm";
+import { Entity,PrimaryGeneratedColumn,Column, OneToMany } from "typeorm";
+import Pedido_Exemplar from "./Pedido_Exemplar";
 
 @Entity()
 
@@ -13,7 +14,8 @@ export class Fornecedores{
     estadoSigla:string
 
     @Column({unique:true})
-    endereco:string
+    cnpj:string
 
-
+   @OneToMany(()=>Pedido_Exemplar,(pedidos)=>pedidos.funcionario)
+   pedidos:Pedido_Exemplar[]
 }

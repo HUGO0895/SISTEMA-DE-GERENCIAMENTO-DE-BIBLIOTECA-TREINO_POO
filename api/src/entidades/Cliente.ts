@@ -1,4 +1,5 @@
-import { Entity,PrimaryGeneratedColumn,Column } from "typeorm";
+import { Entity,PrimaryGeneratedColumn,Column, OneToMany } from "typeorm";
+import { Emprestimo } from "./Emprestimo";
 
 @Entity()
 export class Cliente{
@@ -14,5 +15,10 @@ export class Cliente{
      @Column({unique:true})
      cpf:string
 
+     @Column()
+     cep:string
+
+     @OneToMany(()=>Emprestimo,(emprestimo)=>emprestimo.cliente)
+     emprestimos:Emprestimo[]
 
 }

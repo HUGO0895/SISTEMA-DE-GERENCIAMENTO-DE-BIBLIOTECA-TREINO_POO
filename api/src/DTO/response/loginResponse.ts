@@ -1,6 +1,6 @@
+import { FuncResponse } from "./funcResponse"
+
 export default  interface LoginResponse{
-    id:number
+    user:FuncResponse
     token:string
-    nome:string
-    emial:string
 }

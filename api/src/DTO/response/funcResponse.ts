@@ -3,4 +3,5 @@ export interface FuncResponse{
      nomeCompleto:string 
      cpf:string 
      email:string
+     cep:string
 }

@@ -1,5 +1,7 @@
+import LivroResponse from "./livroResponse"
+
 export default interface exemplarReponse{
-       idLivro:number
-       idExemplar:number
-       nEmprestimo:number
+       id:number
+       livro:LivroResponse
+       
 }

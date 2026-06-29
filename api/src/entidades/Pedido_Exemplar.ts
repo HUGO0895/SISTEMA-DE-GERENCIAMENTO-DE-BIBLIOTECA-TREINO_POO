@@ -22,13 +22,13 @@ export default  class Pedido_Exemplar{
     @CreateDateColumn()
     emissaoPedido:Date
 
-    @ManyToOne(()=>Livros,(livros)=>livros.pedidos)
+    @ManyToOne(()=>Livros,(livros)=>livros.pedidos,{ nullable: false,eager: true })
     livro:Livros
 
-    @ManyToOne(()=>Funcionario,(funcionarii)=>funcionarii.pedidos)
+    @ManyToOne(()=>Funcionario,(funcionarii)=>funcionarii.pedidos,{ nullable: false,eager: true })
     funcionario:Funcionario
 
-    @ManyToOne(()=>Fornecedores,(Fornecedores)=>Fornecedores.pedidos)
+    @ManyToOne(()=>Fornecedores,(Fornecedores)=>Fornecedores.pedidos,{ nullable: false,eager: true })
     fornecedor:Fornecedores
 
     @Column("date",{nullable:true})

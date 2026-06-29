@@ -5,6 +5,6 @@ const route=Router()
 
 route.post("/exemplar",ExemController.createExem)
 route.delete("/exemplar/:id",ExemController.deleteExem)
-route.get("/exemplar/:id",ExemController.getExem)
+route.get("/exemplar",ExemController.getExem)
 
 export default route

@@ -7,8 +7,5 @@ export  const FuncRepo=AppDataSource.getRepository(Funcionario).extend({
        .select(["func.email","func.senha","func.id","func.cpf","func.cep","func.nomeCompleto"])
        .where("func.email= :email",{email:email})
        .getOne()
-    },
-    async findByCpf(cpf:string):Promise<Funcionario>{
-       return await this.findOne({where:{cpf}})
     }
 })
